@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="alert alert-warning" role="alert">
+    遺伝子 {{ geneid }} は見つかりませんでした。
+</div>
+
+<footer class="text-muted">
+    <div class="container text-center">
+      <p class="mt-5 mb-3 text-muted">© Tao Watanabe {% now "Y" %}</p>
+    </div>
+  </footer>
+{% endblock content%}

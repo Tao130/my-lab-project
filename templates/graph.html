@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+{% block customcss %}
+{% load static %}
+<link rel='stylesheet' type='text/css' href="{% static 'style2.css' %}">
+{% endblock customcss %}
+{% block content %}
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="{% url 'rnaseq' %}" class="navbar-brand d-flex align-items-center">Tao Lab</a>
+        <a href="{% url 'logout' %}" class="btn btn-dark" type="button">ログアウト</a>
+      </div>
+    </div>
+</header>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<main role="main" class="ml-sm-auto col-lg-10 ">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h2 class="h2">FPKM : {{ geneid }}</h2>
+    </div>
+    {% autoescape off %}
+    {{ graph }}
+    {% endautoescape %}
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped table-sm">
+        <thead>
+        <tr>
+            <th>RAP ID</th>
+            <th>{{ headings.0 }}</th>
+            <th>{{ headings.1 }}</th>
+            <th>{{ headings.2 }}</th>
+            <th>{{ headings.3 }}</th>
+            <th>{{ headings.4 }}</th>
+            <th>{{ headings.5 }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ geneid }}</td>
+            <td>{{ fpkms.0 }}</td>
+            <td>{{ fpkms.1 }}</td>
+            <td>{{ fpkms.2 }}</td>
+            <td>{{ fpkms.3 }}</td>
+            <td>{{ fpkms.4 }}</td>
+            <td>{{ fpkms.5 }}</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</main>
+<footer class="text-muted">
+    <div class="container text-center">
+      <p class="mt-5 mb-3 text-muted">© Tao Watanabe {% now "Y" %}</p>
+    </div>
+  </footer>
+{% endblock content%}
