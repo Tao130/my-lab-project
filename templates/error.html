@@ -1,5 +1,13 @@
 {% extends 'base.html'%}
 {% block content %}
+<header>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="{% url 'rnaseq' %}" class="navbar-brand d-flex align-items-center">Tao Lab</a>
+      <a href="{% url 'logout' %}" class="btn btn-dark" type="button">ログアウト</a>
+    </div>
+  </div>
+</header>
 <div class="alert alert-warning" role="alert">
     遺伝子 {{ geneid }} は見つかりませんでした。
 </div>

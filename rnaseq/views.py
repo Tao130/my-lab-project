@@ -38,7 +38,7 @@ def geneidfunc(request):
             go.Bar(name='6th leaf', x=lines, y=[fpkms[2], fpkms[5]])
             ], layout_title_text="{}".format(geneid))
 
-        fig.update_layout(barmode='group')
+        fig.update_layout(yaxis_title='FPKM', barmode='group')
         plot_fig = plot(fig, output_type='div', include_plotlyjs=False)
 
         return render(request, 'graph.html', {'geneid': geneid, 'fpkms': fpkms, 'graph': plot_fig, 'headings': headings})
