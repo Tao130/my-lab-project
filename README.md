@@ -1,4 +1,4 @@
-# my-lab-project
+# TaoLab
 
 イネのRNA-seq解析の発現データ(約3万遺伝子)にラボメンバーが手軽にアクセスできるよう、作成。
 
@@ -14,7 +14,7 @@ html/css/Bootstrap/Python/Django
 
 # スクリーンショット
 
-<img src="./static/input_id.png" width="120px">
+<img src="./static/input_id.png" width="240px"> <img src="./static/graph.png" width="240px">
 
 # 制作者
 
