@@ -15,7 +15,3 @@ html/css/Bootstrap/Python/Django
 # スクリーンショット
 
 <img src="./static/input_id.png" width="240px"> <img src="./static/graph.png" width="240px">
-
-# 制作者
-
-渡部太緒
